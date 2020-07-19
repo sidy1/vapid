@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vapid Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Monoton|Work+Sans:400,800" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
+</head>
+<body>
+  <header class="header" style="background-image: url({{background_image type=image tag=false required=false}})">
+    <h2>A New Site</h2>
+    <h1><span>{{vapid label="Greeting"}}</span></h1>
+
+    <div class="container">
+      <p>This template already has few tags—visit the dashboard now to edit their content. And when you're done, <a href="https://docs.vapid.com/content-types" target="_blank">add your own content tags</a>.</p>
+      <p><a href="/dashboard" class="login button">Login</a></p>
+      <p><small>Lastly, submit the contact form below.</small></p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <header>
+        <h2>Contact Yourself</h2>
+        <p>Before submitting this form, <a href="/dashboard">login to the dashboard</a>. We'll send the form submission to the email address you provided when setting up the dashboard, via <a href="http://formspree.io/" target="_blank">Formspree</a>.</p>
+      </header>
+
+      {{#form contact subject="Vapid Example Contact Form"}}
+        {{name}}
+        {{email}}
+        {{message long=true}}
+      {{/form}}
+    </div>
+  </section>
+
+  <footer>
+    
+  </footer>
+
+  <script src="/javascripts/site.js"></script>
+</body>
+</html>
